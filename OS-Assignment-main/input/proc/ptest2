@@ -1,0 +1,6 @@
+1 26
+alloc 300 0
+alloc 300 1
+free 0
+alloc 100 0
+addr 0

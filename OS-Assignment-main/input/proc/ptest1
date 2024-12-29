@@ -1,0 +1,27 @@
+1 26
+alloc 300 0
+alloc 300 1
+alloc 400 2
+addr 0
+addr 1
+free 0
+free 1
+alloc 400 3
+alloc 100 4
+malloc 300 10
+malloc 300 11
+malloc 400 12
+addr 10
+addr 11
+free 10
+free 11
+malloc 400 13
+malloc 100 14
+addr 14
+write 100 4 6
+addr 3
+addr 4
+read 3 5 20
+addr 13
+write 105 13 5
+read 13 0 20

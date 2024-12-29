@@ -1,0 +1,67 @@
+1 65
+alloc 100 0
+alloc 40 1
+alloc 20 2
+alloc 300 3
+alloc 20 4
+malloc 20 20
+alloc 32 5
+malloc 300 21
+alloc 30 6
+alloc 20 7
+alloc 120 8
+alloc 30 9
+malloc 412 22
+alloc 30 10
+malloc 10 23
+malloc 100 24
+alloc 26 11
+alloc 70 12
+alloc 20 13
+alloc 30 14
+malloc 1000 25
+alloc 300 15
+alloc 30 16
+alloc 62 17
+malloc 62 26
+malloc 23 27
+alloc 30 18
+addr 0
+addr 1
+write 100 3 0
+write 105 5 5
+write 110 22 5
+read 3 0 28
+read 22 5 28
+read 5 5 28
+free 3
+free 8
+free 13
+free 9
+free 1
+free 7
+free 0
+free 14
+free 10
+free 6
+free 16
+free 4
+free 17
+free 12
+free 2
+free 11
+free 15
+free 5
+calc
+free 22
+free 23
+free 20
+free 21
+free 27
+free 24
+free 25
+free 26
+free 18
+addr 0
+addr 1
+
