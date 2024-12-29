@@ -1,4 +1,3 @@
-
 #include "queue.h"
 #include "sched.h"
 #include <pthread.h>
@@ -94,7 +93,7 @@ void boost_prio(struct pcb_t *proc){
 			pthread_mutex_lock(&queue_lock);
             enqueue(&mlq_ready_queue[proc->prio], proc);
 			pthread_mutex_unlock(&queue_lock);
-            printf("Process %d boosted to priority: %d; waitTime: %d\n", proc->pid, proc->prio, proc->wait_time);
+            printf("Process %d boosted to priority: %d\n", proc->pid, proc->prio);
         }
     }
 }
@@ -130,7 +129,11 @@ struct pcb_t *get_mlq_proc(void)
 			pthread_mutex_unlock(&queue_lock);
 			--prio_slot[idx];
 			if(proc->count_boost > 0){
-				if(proc->prio < proc->base_prio) proc->prio++;
+				if(proc->prio < proc->base_prio) {
+					proc->prio++;
+		            printf("Process %d decreased to priority: %d\n", proc->pid, proc->prio);
+
+				}
 				proc->count_boost--;
 			}
 			proc->wait_time = 0;
